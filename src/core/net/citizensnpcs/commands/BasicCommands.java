@@ -45,18 +45,18 @@ public class BasicCommands extends CommandHandler {
 	@Command(
 			aliases = "npc",
 			usage = "add [text]",
-			desc = "add text to an NPC",
+			desc = "Fuegt einen Text dem NPC hinzu",
 			modifiers = "add",
 			min = 2)
 	@CommandPermissions("basic.modify.addtext")
 	public static void add(CommandContext args, Player player, HumanNPC npc) {
 		String text = args.getJoinedStrings(1);
 		NPCDataManager.addText(npc.getUID(), text);
-		player.sendMessage(StringUtils.wrap(text) + " was added to "
+		player.sendMessage(StringUtils.wrap(text) + " wurde zugefuegt zu "
 				+ StringUtils.wrap(npc.getName() + "'s") + " text.");
 	}
 
-	@Command(aliases = "citizens", desc = "view Citizens info", max = 0)
+	@Command(aliases = "citizens", desc = "Zeigt die Citizens Informationen", max = 0)
 	@ServerCommand()
 	@CommandPermissions("admin.info")
 	@CommandRequirements()
@@ -92,7 +92,7 @@ public class BasicCommands extends CommandHandler {
 
 	@Command(
 			aliases = "citizens",
-			desc = "view Citizens info",
+			desc = "Zeigt die Citizens Informationen",
 			modifiers = "clean",
 			max = 1)
 	@ServerCommand()
@@ -123,7 +123,7 @@ public class BasicCommands extends CommandHandler {
 	@Command(
 			aliases = "npc",
 			usage = "color [color-code]",
-			desc = "set the name color of an NPC",
+			desc = "Setzt die Namenfarbe vom NPC",
 			modifiers = "color",
 			min = 2,
 			max = 2)
@@ -162,7 +162,7 @@ public class BasicCommands extends CommandHandler {
 	@Command(
 			aliases = "npc",
 			usage = "copy",
-			desc = "copy an NPC",
+			desc = "Kopiert ein NPC",
 			modifiers = "copy",
 			min = 1,
 			max = 1)
@@ -188,7 +188,7 @@ public class BasicCommands extends CommandHandler {
 	@Command(
 			aliases = "npc",
 			usage = "create [name] (text)",
-			desc = "create an NPC",
+			desc = "Erstellt einen NPC",
 			modifiers = "create",
 			min = 2)
 	@CommandPermissions("basic.create")
@@ -314,7 +314,7 @@ public class BasicCommands extends CommandHandler {
 	@Command(
 			aliases = "npc",
 			usage = "list (name) (page)",
-			desc = "view a list of NPCs for a player",
+			desc = "Zeigt eine Liste von allen NPCs vom Spieler",
 			modifiers = "list",
 			min = 1,
 			max = 3)
