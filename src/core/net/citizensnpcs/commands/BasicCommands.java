@@ -45,7 +45,7 @@ public class BasicCommands extends CommandHandler {
 	@Command(
 			aliases = "npc",
 			usage = "add [text]",
-			desc = "add text to an NPC",
+			desc = "addddd text to an NPC",
 			modifiers = "add",
 			min = 2)
 	@CommandPermissions("basic.modify.addtext")
